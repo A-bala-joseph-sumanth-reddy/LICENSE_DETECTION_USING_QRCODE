@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <style>
+        label {
+            margin-bottom: 2px;
+        }
+        .invalid-feedback{
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body class="hero-anime">
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+
+                        <a class="navbar-brand" href="#" target="_blank"><img class="img"
+                                src="../static/Images/Emblem_of_India.png" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/enterdata">Home</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                    <a class="nav-link" href="enterdata">Enter Licence Data</a>
+                                </li>
+
+                                
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/licences">View Licences</a>
+                                    
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="/user">Logout</a>
+                                    </li>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="border"
+        style="position: absolute;left:50%;top:60%;transform:translate(-50%,-50%);width: 50%;margin-bottom: 1cm">
+        <h2 class="text-center">Enter LICENCE Data Here</h2>
+        <br>
+        <form class="needs-validation" action="/enterdata" method="POST" enctype="multipart/form-data" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom01">Name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Name" name="name"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a Name
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom02">Father's Name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Father's Name"
+                        name="fname" required>
+                    <div class="invalid-feedback">
+                        This is required Field
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom02">Date Of Birth</label>
+                    <input type="date" class="form-control" id="validationCustom02" name="dob" required>
+                    <div class="invalid-feedback">
+                        Please provide Date of Birth.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom03">House No</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="House No" name="hno"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid House No.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom04">Colony</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="Colony" name="colony"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Colony.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom05">Location</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="location"
+                        name="location" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Location.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom03">Mandal</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="Mandal" name="mandal"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Mandal.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom04">District</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="District" name="dist"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid District.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom05">PIN Code</label>
+                    <input type="number" class="form-control" id="validationCustom05" placeholder="PIN" name="pin"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                    <div class="col-md-3 mb-2">
+                        <label for="validationCustom03">Reference No</label>
+                        <input type="number" class="form-control" id="validationCustom03" placeholder="Reference No" name="ref"
+                            required>
+                        <div class="invalid-feedback">
+                            Please provide a valid Reference No.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="validationCustom04">Vehicle Type</label>
+                        <input type="text" class="form-control" id="validationCustom04" placeholder="Vehicle Type" name="vtype"
+                            required>
+                        <div class="invalid-feedback">
+                            Please provide a valid Vehicle Type.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                        <label for="validationCustom05">Badge No</label>
+                        <input type="text" class="form-control" id="validationCustom05" placeholder="Badge No"
+                            name="badge" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid Location.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2">
+                            <label for="validationCustom05">Blood Group</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Blood Group"
+                                name="blood" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Blood Group.
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                </div>
+
+
+            <div class="form-row">
+                <div class="input-group col-md-6 mb-3 mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Photo</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" name="photo" class="custom-file-input" id="inputGroupFile01" required>
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
+                <div class="input-group col-md-6 mb-3 mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Signature</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" name="usersign" class="custom-file-input" id="inputGroupFile01" required>
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-group col-md-8 mb-2 mt-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Authority Signature</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" name="authoritysign" class="custom-file-input" id="inputGroupFile01" required>
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom05">RTA</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="RTA" name="rta"
+                        required>
+                </div>
+            </div></br>
+            <button class="btn-hover color-3" style="width:100px;height:35px">Submit</button>
+        </form>
+    </div>
+    <br><br><br><br>
+    <div class="container" style="top:-300px;position: absolute">
+        <div class="row">
+            <div class="col-12">
+                <div id="switch">
+                    <div id="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script src="../static/main.js"></script>
+</body>
+
+</html>

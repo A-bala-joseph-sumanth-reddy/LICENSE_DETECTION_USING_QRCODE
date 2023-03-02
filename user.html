@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <style>
+        label {
+            margin-bottom: 2px;
+        }
+        .invalid-feedback{
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body class="hero-anime">
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+
+                        <a class="navbar-brand" href="#" target="_blank"><img class="img"
+                                src="../static/Images/Emblem_of_India.png" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/index">Home</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                    <a class="nav-link" href="/user">User</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                    <a class="nav-link" href="/register">Register</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/admin">Admin</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="border"
+        style="position: absolute;left:50%;top:60%;transform:translate(-50%,-50%);width: 50%;margin-bottom: 1cm">
+        <h2 class="text-center">Login</h2>
+        <br>
+        <form class="needs-validation" action="/login" method="POST" enctype="multipart/form-data" novalidate style="margin-left: 200px;">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">Username</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Username" name="username"
+                        required style="width: 300px;">
+                    <div class="invalid-feedback">
+                        Please provide a Name
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-md-4 mb-2">
+                    <label for="validationCustom03">Password</label>
+                    <input type="password" class="form-control" id="validationCustom03" placeholder="Password" name="password"
+                        required style="width: 300px;">
+                    <div class="invalid-feedback">
+                        Please provide a valid Password.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                
+            </div>
+
+
+           
+
+
+            
+            <button class="btn-hover color-3" style="width:100px;height:35px">Submit</button>
+            
+        </form>
+        <button class="btn-hover color-3" style="width:100px;height:35px"><a href="/register" >Register</a></button>
+    </div>
+    <br><br><br><br>
+    <div class="container" style="top:-300px;position: absolute">
+        <div class="row">
+            <div class="col-12">
+                <div id="switch">
+                    <div id="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <script src="../static/main.js"></script>
+</body>
+
+</html>
